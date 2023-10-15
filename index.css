@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(36, 120, 194);
+} 
+
+
+
+.form-group {
+    background-color: rgb(252, 252, 252);
+    width: 500px;
+    padding: 32px;
+    margin: 0 auto; 
+    margin-top: 30vh; 
+    transform: translateY(-50%);
+    border-radius: 16px;
+    border: 2px;
+    border-color: beige;
+    margin-bottom: -20vh;
+}
+
+.table {
+    width: 500px;
+    margin: 0 auto;
+    background-color: rgb(235, 235, 235);
+    border-radius: 16px;
+    border-top: 16px !important;
+    border: 2px;
+}
+
+.table-hover {    
+    background-color: rgb(255, 255, 255) !important;
+}
+
+.thead-dark {
+    border-top: 16px !important; 
+}
