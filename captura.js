@@ -1,6 +1,6 @@
 /**El tema se explica en el video del 25 de Septiembre y 29 de Septiembre*/
 
-var datos = []
+var datos = [];
 /**Create - Guardar*/
 var agregar = function () {
 
@@ -19,10 +19,10 @@ var agregar = function () {
         datos
         .push(
             {cedula: cedula, nombre: nombre, apellidos: apellidos, direccion: direccion}
-        )
-        localStorage.setItem("misdatos",datos)
-    console.log(datos)
-    listarinformacion()
+        );
+        localStorage.setItem("misdatos",datos);
+    console.log(datos);
+    listarinformacion();
 
 }
 /**Update - Editar*/
@@ -91,3 +91,24 @@ var eliminarcampo = function (posicion) {
 console.log(datos)
 
 localStorage.setItem("misdatos", "boriscamargo78@gmail.com")
+
+
+var buscarcedula = function () {
+    var cedulaBuscada = document.getElementById("inputCedula").value;
+    var encontrado = false;
+
+    for (var i = 0; i < datos.length; i++) {
+        if (datos[i].cedula === cedulaBuscada) {
+            document.getElementById("cedula").value = datos[i].cedula;
+            document.getElementById("nombre").value = datos[i].nombre;
+            document.getElementById("apellidos").value = datos[i].apellidos;
+            document.getElementById("direccion").value = datos[i].direccion;
+            encontrado = true;
+            break;
+        }
+    }
+
+    if (!encontrado) {
+        alert("Cédula no encontrada");
+    }
+};
