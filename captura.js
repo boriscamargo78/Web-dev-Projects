@@ -93,7 +93,7 @@ console.log(datos)
 localStorage.setItem("misdatos", "boriscamargo78@gmail.com")
 
 
-var buscarcedula = function () {
+/*var buscarcedula = function () {
     var cedulaBuscada = document.getElementById("inputCedula").value;
     var encontrado = false;
 
@@ -104,6 +104,23 @@ var buscarcedula = function () {
             document.getElementById("apellidos").value = datos[i].apellidos;
             document.getElementById("direccion").value = datos[i].direccion;
             encontrado = true;
+            break;
+        }
+    }
+
+    if (!encontrado) {
+        alert("Cédula no encontrada");
+    }
+}; Este código funciona para mostrar los datos en el mismo formulario pero no en el alert*/ 
+
+var buscarcedula = function () {
+    var cedulaBuscada = document.getElementById("inputCedula").value;
+    var encontrado = false;
+
+    for (var i = 0; i < datos.length; i++) {
+        if (datos[i].cedula === cedulaBuscada) {
+            encontrado = true;
+            alert("Cédula: " + datos[i].cedula + "\nNombre: " + datos[i].nombre + "\nApellidos: " + datos[i].apellidos);
             break;
         }
     }
